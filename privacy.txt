@@ -1,64 +1,81 @@
-**Privacy Policy**
+# Privacy policy — Ads & consent section
 
-HagiosTech, Inc. built the Hebrew/Greek Interlinear Bible app as an Ad Supported app. This SERVICE is provided by HagiosTech, Inc. at no cost and is intended for use as is.
+---
 
-This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
+## English
 
-If you choose to use our Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
+### Advertising and Consent
 
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Hebrew/Greek Interlinear Bible unless otherwise defined in this Privacy Policy.
+This app is supported by advertising provided through **Google AdMob**. To show
+ads, the app and Google may collect and process certain information, including a
+device **Advertising ID**, general device information, and app activity.
 
-**Information Collection and Use**
+**Personalized vs. non-personalized ads.** Depending on your region and your
+choices, ads may be **personalized** (based on your interests) or
+**non-personalized** (generic). We use Google's certified Consent Management
+Platform (CMP) to ask for your consent where required.
 
-For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to None. The information that we request will be retained by us and used as described in this privacy policy.
+- If you are in the **European Economic Area, the United Kingdom, or
+  Switzerland**, you will be asked to consent before personalized ads are shown.
+  You can **accept**, or choose to receive **non-personalized ads** instead.
+- If you are in a **US state** with applicable privacy laws, you will be offered
+  the ability to opt out of the sale/sharing of personal information for
+  personalized advertising.
+- If you **decline** personalization, you will **still see ads**, but they will
+  be non-personalized.
 
-The app does use third-party services that may collect information used to identify you.
+**Changing your choice.** You can change your consent at any time from the app's
+**Settings → Privacy options** (shown where required by your region).
 
-Link to the privacy policy of third-party service providers used by the app
+**Paid, ad-free version.** If you purchase an ad-removal subscription, no ads are
+shown and no advertising consent is requested or required.
 
-*   [Google Play Services](https://www.google.com/policies/privacy/)
-*   [AdMob](https://support.google.com/admob/answer/6128543?hl=en)
-*   [Google Analytics for Firebase](https://firebase.google.com/policies/analytics)
+**Analytics.** The app also uses Google Firebase Analytics to understand usage
+and improve the app.
 
-**Log Data**
+For more information about how Google uses data, see Google's Privacy Policy at
+<https://policies.google.com/privacy>.
 
-We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
+Contact: **hagiostech@gmail.com**.
 
-**Cookies**
+---
 
-Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+## Español
 
-This Service does not use these "cookies" explicitly. However, the app may use third-party code and libraries that use "cookies" to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+### Publicidad y consentimiento
 
-**Service Providers**
+Esta aplicación se financia con publicidad proporcionada a través de **Google
+AdMob**. Para mostrar anuncios, la aplicación y Google pueden recopilar y
+procesar cierta información, incluido un **identificador de publicidad** del
+dispositivo, información general del dispositivo y la actividad en la aplicación.
 
-We may employ third-party companies and individuals due to the following reasons:
+**Anuncios personalizados y no personalizados.** Según su región y sus
+elecciones, los anuncios pueden ser **personalizados** (según sus intereses) o
+**no personalizados** (genéricos). Utilizamos la Plataforma de Gestión de
+Consentimiento (CMP) certificada de Google para solicitar su consentimiento
+cuando sea necesario.
 
-*   To facilitate our Service;
-*   To provide the Service on our behalf;
-*   To perform Service-related services; or
-*   To assist us in analyzing how our Service is used.
+- Si se encuentra en el **Espacio Económico Europeo, el Reino Unido o Suiza**, se
+  le pedirá su consentimiento antes de mostrar anuncios personalizados. Puede
+  **aceptar** o elegir recibir **anuncios no personalizados**.
+- Si se encuentra en un **estado de EE. UU.** con leyes de privacidad aplicables,
+  se le ofrecerá la posibilidad de rechazar la venta o el uso compartido de su
+  información personal para publicidad personalizada.
+- Si **rechaza** la personalización, **seguirá viendo anuncios**, pero serán no
+  personalizados.
 
-We want to inform users of this Service that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+**Cambiar su elección.** Puede cambiar su consentimiento en cualquier momento
+desde **Configuración → Opciones de privacidad** de la aplicación (se muestra
+donde lo exige su región).
 
-**Security**
+**Versión de pago sin anuncios.** Si adquiere una suscripción para eliminar los
+anuncios, no se muestran anuncios ni se solicita ni se requiere consentimiento de
+publicidad.
 
-[I/We] value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and [I/We] cannot guarantee its absolute security.
+**Analítica.** La aplicación también utiliza Google Firebase Analytics para
+comprender el uso y mejorar la aplicación.
 
-**Links to Other Sites**
+Para más información sobre cómo Google usa los datos, consulte la Política de
+Privacidad de Google en <https://policies.google.com/privacy>.
 
-This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
-
-**Children’s Privacy**
-
-These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13 years of age. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do the necessary actions.
-
-**Changes to This Privacy Policy**
-
-We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
-
-This policy is effective as of 2022-11-15
-
-**Contact Us**
-
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at hagiostech@gmail.com.
+Contacto: **hagiostech@gmail.com**.
