@@ -1,1 +1,0 @@
-# hagiostech.github.io
