@@ -1,3 +1,4 @@
+OWNERDOMAIN=hagiostech.com
 google.com, pub-8702347513174089, DIRECT, f08c47fec0942fa0
 pangleglobal.com, 5042637, DIRECT
 inmobi.com, f2c101627ec74e8aace5edcf38144031, DIRECT, 83e75a7ae333ca9d
