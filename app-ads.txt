@@ -95,3 +95,42 @@ acexchange.co.kr, 1562884725, RESELLER
 mman.kr, 32102, RESELLER
 myfeature.tv, N1fNlXquFCVDX3gt6MJN, RESELLER
 verve.com, 5897, RESELLER, 0c8f5958fc2d6270
+opera.com, pub13738037153024, RESELLER, 55a0c5fd61378de3
+rubiconproject.com, 28299, RESELLER, 0bfd66d529a55807
+pubnative.net, 1009046, RESELLER, d641df8625486a7b
+smaato.com, 1100058938, RESELLER, 07bcf65f187117b4
+taurusx.com, 80068, RESELLER
+openx.com, 540679900, RESELLER
+conversantmedia.com, 100358, RESELLER
+rubiconproject.com, 25978, RESELLER
+onetag.com, 8668c16092f01e8, RESELLER
+video.unrulymedia.com, 475093422, RESELLER
+axonix.com, 59202, RESELLER
+pubmatic.com, 167188, RESELLER, 5d62403b186f2ace
+aceex.io, 2577, RESELLER, b1cf3c874d5c6682
+lijit.com, 530498, RESELLER
+admanmedia.com, 2072, RESELLER
+pubmatic.com, 164289, RESELLER, 5d62403b186f2ace
+start.io, 158727715, RESELLER
+nativo.com, 5958, RESELLER, 59521ca7cc5e9fee
+outbrain.com, 0023749a2264ea0429a71b54ac9ca0de9a, RESELLER
+outbrain.com, 00dbc7a68d0cd51d55ac0aa9e1918c9a34, RESELLER
+pubnative.net, 1008770, RESELLER, d641df8625486a7b
+zmaticoo.com, 114122, RESELLER
+trustedstack.com, TS677PGY3, RESELLER
+axonix.com, 59204, RESELLER
+display.io, 236374, RESELLER
+bidease.com, bidease_seller_49, RESELLER
+sovrn.com, 400766, RESELLER, fafdf38b16bf6b2b
+peak226.com, 12900, RESELLER
+dauup.com, 34109, RESELLER
+media.net, 8CUF7U34W, RESELLER
+apester.com, 0707, RESELLER
+mobupps.com, c74d97b01eae257e44aa9d5bade97baf5001, RESELLER
+pubmatic.com, 167346, RESELLER, 5d62403b186f2ace
+bidmachine.io, 1561, RESELLER
+bidmachine.io, 1560, RESELLER
+bidmachine.io, 1539, RESELLER
+mobupps.com, c74d97b01eae257e44aa9d5bade97baf33149, RESELLER
+rubiconproject.com, 18364, RESELLER, 0bfd66d529a55807
+indexexchange.com, 216408, RESELLER, 50b1c356f2c5c8fc
