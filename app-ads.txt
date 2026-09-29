@@ -1,5 +1,6 @@
 OWNERDOMAIN=hagiostech.com
 google.com, pub-8702347513174089, DIRECT, f08c47fec0942fa0
+pangleglobal.com, 5042637, DIRECT
 chocolateplatform.com, 23045, RESELLER, 49a66ce31a704197
 chocolateplatform.com, 23045, DIRECT, 49a66ce31a704197
 improvedigital.com, 2919, RESELLER
