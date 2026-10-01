@@ -3,12 +3,6 @@ OWNERDOMAIN=hagiostech.com
 # Google / AdMob - primary demand.
 google.com, pub-8702347513174089, DIRECT, f08c47fec0942fa0
 
-# Pangle - the adapter is gone from the working tree, but every published
-# version through v70 still serves Pangle ads, so live installs need this
-# line. Drop it when AdMob's mediation report shows Pangle impressions at
-# zero, not on a date. See 5d41d72.
-pangleglobal.com, 5042637, DIRECT
-
 # OneTag - 7 lines from OneTag's own snippet. The exchange IDs below are
 # OneTag's own accounts; the same IDs reappear in the Adagio - Onetag block
 # further down and both copies stay. Added in dad0648.
@@ -24,6 +18,8 @@ smartadserver.com, 4111, RESELLER
 # Equativ (Smart AdServer) - Open Bidding
 smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
 smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
+sharethrough.com, 4194-OB, RESELLER, 060d053dcf45cbf3
+sharethrough.com, 4194, RESELLER, 060d053dcf45cbf3
 
 # Adagio
 adagio.io, 1890, DIRECT
