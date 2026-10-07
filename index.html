@@ -4,45 +4,609 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hagios Tech, Inc.</title>
+    <meta name="description" content="Hagios Tech, Inc. builds mobile apps for studying the Bible in its original languages: the Hebrew/Greek Interlinear Bible, Biblia Interlineal Hebreo/Griego, and NBLA.">
+    <meta name="theme-color" content="#07090d">
+    <link rel="icon" type="image/jpeg" href="/images/hagiostech-logo.jpg">
+    <link rel="apple-touch-icon" href="/images/hagiostech-logo.jpg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hagios Tech, Inc.">
+    <meta property="og:title" content="Hagios Tech, Inc.">
+    <meta property="og:description" content="Mobile apps for studying the Bible in its original languages.">
+    <meta property="og:url" content="https://hagiostech.com/">
+    <meta property="og:image" content="https://hagiostech.com/images/hagiostech-logo.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #07090d;
+            --bg-raised: #0e1218;
+            --card: rgba(255, 255, 255, 0.035);
+            --border: rgba(255, 255, 255, 0.09);
+            --border-strong: rgba(255, 255, 255, 0.18);
+            --text: #e7ebf0;
+            --muted: #8d97a5;
+            --accent: #3ee0ff;
+            --accent-2: #4d7cff;
+            --accent-ink: #031016;
+            --grid: rgba(255, 255, 255, 0.035);
+            --glow: rgba(62, 224, 255, 0.16);
+            --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+            --sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+            --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f5f7fa;
+                --bg-raised: #ffffff;
+                --card: #ffffff;
+                --border: rgba(10, 20, 35, 0.1);
+                --border-strong: rgba(10, 20, 35, 0.2);
+                --text: #0d1420;
+                --muted: #556070;
+                --accent: #0089b3;
+                --accent-2: #2f5bea;
+                --accent-ink: #ffffff;
+                --grid: rgba(10, 20, 35, 0.05);
+                --glow: rgba(0, 137, 179, 0.12);
+                --shadow: 0 24px 48px -28px rgba(10, 20, 35, 0.35);
+            }
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; overflow-x: clip; }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+            font-size: 17px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Faint blueprint grid fading out toward the bottom of the hero. */
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 900px;
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 75%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 30%, transparent 75%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: -260px;
+            left: 50%;
+            width: min(900px, 100%);
+            height: 700px;
+            transform: translateX(-50%);
+            background: radial-gradient(closest-side, var(--glow), transparent);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; text-underline-offset: 3px; }
+        a:focus-visible, .btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .mono {
+            font-family: var(--mono);
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ---------- Header ---------- */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            background: color-mix(in srgb, var(--bg) 72%, transparent);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+        .brand:hover { text-decoration: none; }
+        .brand img {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid var(--border-strong);
+        }
+
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a { color: var(--muted); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+        /* ---------- Hero ---------- */
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 56px;
+            align-items: center;
+            padding: 96px 0 104px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 12px;
+            border: 1px solid var(--border-strong);
+            border-radius: 999px;
+            color: var(--muted);
+            background: var(--card);
+        }
+        .eyebrow::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        h1 {
+            margin: 22px 0 18px;
+            font-size: clamp(2.5rem, 6vw, 4.25rem);
+            line-height: 1.04;
+            letter-spacing: -0.035em;
+            font-weight: 700;
+        }
+        h1 .grad {
+            background: linear-gradient(100deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .lede {
+            max-width: 34rem;
+            margin: 0 0 32px;
+            color: var(--muted);
+            font-size: 1.15rem;
+        }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-strong);
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.98rem;
+            transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+        }
+        .btn:hover { text-decoration: none; transform: translateY(-1px); border-color: var(--accent); }
+        .btn svg { width: 18px; height: 18px; flex: none; }
+        .btn-primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--accent-ink);
+        }
+        .btn-primary:hover { background: color-mix(in srgb, var(--accent) 85%, #fff); }
+
+        /* Logo panel with a slow light sweep across the brushed metal. */
+        .logo-frame {
+            position: relative;
+            justify-self: center;
+            width: min(380px, 100%);
+            aspect-ratio: 1;
+            border-radius: 28px;
+            padding: 1px;
+            background: linear-gradient(140deg, var(--border-strong), transparent 40%, transparent 60%, var(--accent));
+            box-shadow: var(--shadow), 0 0 80px -20px var(--glow);
+        }
+        .logo-frame .inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 27px;
+            overflow: hidden;
+            background: #111;
+        }
+        .logo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .logo-frame .inner::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.22) 50%, transparent 65%);
+            transform: translateX(-120%);
+            animation: sweep 6s ease-in-out 1s infinite;
+        }
+        @keyframes sweep {
+            0% { transform: translateX(-120%); }
+            35%, 100% { transform: translateX(120%); }
+        }
+        .logo-frame .tag {
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-strong);
+            background: var(--bg-raised);
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        /* ---------- Sections ---------- */
+
+        section { padding: 88px 0; border-top: 1px solid var(--border); }
+
+        .section-head { max-width: 40rem; margin-bottom: 48px; }
+        .section-head .mono { color: var(--accent); }
+        h2 {
+            margin: 10px 0 12px;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+        }
+        .section-head p { margin: 0; color: var(--muted); }
+
+        /* ---------- App cards ---------- */
+
+        .apps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .app {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--card);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .app:hover {
+            transform: translateY(-4px);
+            border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+            box-shadow: var(--shadow), 0 0 40px -18px var(--glow);
+        }
+
+        .app-icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-strong);
+            background: #fff;
+        }
+        .app-icon img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+        .badges { display: flex; gap: 8px; margin: 20px 0 10px; }
+        .badge {
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border-strong);
+            color: var(--muted);
+            font-size: 0.7rem;
+        }
+        .badge.lang { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+
+        .app h3 { margin: 0 0 4px; font-size: 1.3rem; line-height: 1.25; letter-spacing: -0.01em; }
+        .app .alt { margin: 0 0 14px; color: var(--muted); font-size: 0.92rem; font-style: italic; }
+        .app p.desc { margin: 0 0 24px; color: var(--muted); font-size: 0.98rem; }
+
+        .app-foot {
+            margin-top: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .app-foot .policy { color: var(--muted); font-size: 0.88rem; }
+        .app-foot .policy:hover { color: var(--accent); }
+
+        /* ---------- Info grid ---------- */
+
+        .info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .panel {
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--card);
+        }
+        .panel .mono { color: var(--muted); }
+        .panel h3 { margin: 8px 0 12px; font-size: 1.1rem; }
+        .panel ul { list-style: none; margin: 0; padding: 0; }
+        .panel li { padding: 6px 0; border-top: 1px dashed var(--border); font-size: 0.95rem; }
+        .panel li:first-child { border-top: 0; }
+        .panel li span { display: block; color: var(--muted); font-size: 0.85rem; }
+
+        /* ---------- Footer ---------- */
+
+        footer {
+            padding: 32px 0 48px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        footer .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        footer a { color: var(--muted); }
+        footer a:hover { color: var(--text); }
+
+        /* ---------- Responsive ---------- */
+
+        @media (max-width: 920px) {
+            .hero { grid-template-columns: 1fr; gap: 48px; padding: 64px 0 80px; text-align: left; }
+            .logo-frame { width: min(300px, 80%); }
+            .apps, .info { grid-template-columns: 1fr; max-width: 560px; }
+        }
+
+        @media (max-width: 600px) {
+            .wrap { padding: 0 16px; }
+            .nav-links { display: none; }
+            section { padding: 64px 0; }
+            .btn { width: 100%; justify-content: center; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .logo-frame .inner::after { animation: none; }
+            .btn, .app { transition: none; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hagios Tech, Inc.</h1>
-    <p>Orlando, Florida, USA — mobile applications for biblical study.</p>
+    <header>
+        <div class="wrap nav">
+            <a class="brand" href="/">
+                <img src="/images/hagiostech-logo.webp" alt="" width="34" height="34">
+                Hagios Tech, Inc.
+            </a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="#apps">Apps</a>
+                <a href="#about">Company</a>
+                <a href="mailto:hagiostech@gmail.com">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Our apps</h2>
-    <ul>
-        <li>
-            <a href="https://play.google.com/store/apps/details?id=com.hagiostech.greekinterlinearbible">
-                Hebrew/Greek Interlinear Bible</a>
-        </li>
-        <li>
-            <a href="https://play.google.com/store/apps/details?id=com.hagiostech.greekinterlinearbible.spanish">
-                Biblia Interlineal Hebreo/Griego</a>
-        </li>
-        <li>
-            <a href="https://play.google.com/store/apps/details?id=com.hagiostech.nbla">
-                NBLA — Nueva Biblia de las Américas</a>
-        </li>
-    </ul>
+    <main>
+        <div class="wrap hero">
+            <div>
+                <span class="eyebrow mono">Orlando, Florida · Mobile apps</span>
+                <h1>Scripture, in its <span class="grad">original languages</span>.</h1>
+                <p class="lede">
+                    Hagios Tech builds mobile apps for studying the Bible word by word, from the
+                    Hebrew and Greek texts to modern English and Spanish.
+                </p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="#apps">
+                        Explore the apps
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    </a>
+                    <a class="btn" href="https://play.google.com/store/apps/dev?id=7103031149574194716">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.6v18.8c0 .5.5.8.9.6L21 12.9c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
+                        Google Play
+                    </a>
+                </div>
+            </div>
 
-    <h2>Privacy policies</h2>
-    <ul>
-        <li>
-            <a href="/privacy.txt">Hebrew/Greek Interlinear Bible and Biblia Interlineal Hebreo/Griego</a>
-            — these apps show ads, so this policy covers advertising and consent
-        </li>
-        <li>
-            <a href="/nbla-privacy.txt">NBLA — Nueva Biblia de las Américas</a>
-            — this app shows no ads; the policy covers analytics only
-        </li>
-    </ul>
+            <div class="logo-frame">
+                <div class="inner">
+                    <picture>
+                        <source srcset="/images/hagiostech-logo.webp" type="image/webp">
+                        <img src="/images/hagiostech-logo.jpg" alt="Hagios Tech logo" width="480" height="480">
+                    </picture>
+                </div>
+                <span class="tag mono">// hagiostech.com</span>
+            </div>
+        </div>
 
-    <h2>More</h2>
-    <ul>
-        <li><a href="https://play.google.com/store/apps/dev?id=7103031149574194716">All apps on Google Play</a></li>
-        <li><a href="/app-ads.txt">app-ads.txt</a></li>
-    </ul>
+        <section id="apps">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="mono">01 — Apps</span>
+                    <h2>Three apps. Two languages.</h2>
+                    <p>Available for Android on Google Play.</p>
+                </div>
 
-    <p>Contact: <a href="mailto:hagiostech@gmail.com">hagiostech@gmail.com</a></p>
+                <div class="apps">
+                    <article class="app">
+                        <div class="app-icon">
+                            <picture>
+                                <source srcset="/images/hgib-english-app.webp" type="image/webp">
+                                <img src="/images/hgib-english-app.png" alt="Hebrew/Greek Interlinear Bible app icon" width="88" height="88" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="badges">
+                            <span class="badge lang mono">EN</span>
+                            <span class="badge mono">Interlinear</span>
+                        </div>
+                        <h3>Hebrew/Greek Interlinear Bible</h3>
+                        <p class="alt">HGIB — English</p>
+                        <p class="desc">
+                            Read the Hebrew and Greek texts word by word, with transliteration,
+                            Strong's numbers, grammatical parsing and English glosses.
+                        </p>
+                        <div class="app-foot">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.hagiostech.greekinterlinearbible">Get it on Google Play</a>
+                            <a class="policy" href="/privacy.txt">Privacy policy</a>
+                        </div>
+                    </article>
+
+                    <article class="app" lang="es">
+                        <div class="app-icon">
+                            <picture>
+                                <source srcset="/images/hgib-app-spanish.webp" type="image/webp">
+                                <img src="/images/hgib-app-spanish.png" alt="Ícono de la app Biblia Interlineal Hebreo/Griego" width="88" height="88" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="badges">
+                            <span class="badge lang mono">ES</span>
+                            <span class="badge mono">Interlineal</span>
+                        </div>
+                        <h3>Biblia Interlineal Hebreo/Griego</h3>
+                        <p class="alt">HGIB — Español</p>
+                        <p class="desc">
+                            Lee los textos hebreo y griego palabra por palabra, con transliteración,
+                            números Strong, análisis gramatical y traducción al español.
+                        </p>
+                        <div class="app-foot">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.hagiostech.greekinterlinearbible.spanish">Disponible en Google Play</a>
+                            <a class="policy" href="/privacy.txt">Política de privacidad</a>
+                        </div>
+                    </article>
+
+                    <article class="app" lang="es">
+                        <div class="app-icon">
+                            <img src="/images/nbla-app.png" alt="Ícono de la app NBLA" width="88" height="88" loading="lazy">
+                        </div>
+                        <div class="badges">
+                            <span class="badge lang mono">ES</span>
+                            <span class="badge mono">Sin anuncios</span>
+                        </div>
+                        <h3>Nueva Biblia de las Américas</h3>
+                        <p class="alt">NBLA</p>
+                        <p class="desc">
+                            La Biblia completa en la traducción NBLA, en una app sencilla,
+                            sin anuncios y sin necesidad de crear una cuenta.
+                        </p>
+                        <div class="app-foot">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.hagiostech.nbla">Disponible en Google Play</a>
+                            <a class="policy" href="/nbla-privacy.txt">Política de privacidad</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="wrap">
+                <div class="section-head">
+                    <span class="mono">02 — Company</span>
+                    <h2>Hagios Tech, Inc.</h2>
+                    <p>An independent software company in Orlando, Florida, making tools for biblical study.</p>
+                </div>
+
+                <div class="info">
+                    <div class="panel">
+                        <span class="mono">Privacy</span>
+                        <h3>Privacy policies</h3>
+                        <ul>
+                            <li>
+                                <a href="/privacy.txt">Interlinear Bible apps (EN &amp; ES)</a>
+                                <span>These apps show ads; covers advertising and consent.</span>
+                            </li>
+                            <li>
+                                <a href="/nbla-privacy.txt">NBLA</a>
+                                <span>No ads; covers analytics only.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel">
+                        <span class="mono">Publisher</span>
+                        <h3>Developer resources</h3>
+                        <ul>
+                            <li>
+                                <a href="https://play.google.com/store/apps/dev?id=7103031149574194716">All apps on Google Play</a>
+                                <span>Our developer page.</span>
+                            </li>
+                            <li>
+                                <a href="/app-ads.txt">app-ads.txt</a>
+                                <span>Authorized advertising sellers.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel">
+                        <span class="mono">Contact</span>
+                        <h3>Get in touch</h3>
+                        <ul>
+                            <li>
+                                <a href="mailto:hagiostech@gmail.com">hagiostech@gmail.com</a>
+                                <span>Support, feedback and business inquiries.</span>
+                            </li>
+                            <li>
+                                Orlando, Florida, USA
+                                <span>Headquarters.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap row">
+            <span>© <span id="year">2026</span> Hagios Tech, Inc. All rights reserved.</span>
+            <span>
+                <a href="/privacy.txt">Privacy</a> ·
+                <a href="/nbla-privacy.txt">NBLA privacy</a> ·
+                <a href="/app-ads.txt">app-ads.txt</a>
+            </span>
+        </div>
+    </footer>
+
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
